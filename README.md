@@ -27,7 +27,6 @@ Depois:
 - `data/events.json` — dados usados pela consulta
 - `assets/` — imagens locais dos eventos
 - `STUDENT_TASK.md` — atividade para os alunos
-- `TEACHER_NOTES.md` — guia do professor com os comportamentos intencionais
 
 ## Rodar localmente
 

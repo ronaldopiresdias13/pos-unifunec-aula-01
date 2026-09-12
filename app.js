@@ -19,6 +19,15 @@ const els = {
   helpDialog: document.querySelector('#helpDialog'),
   closeHelpBtn: document.querySelector('#closeHelpBtn'),
   dialogOkBtn: document.querySelector('#dialogOkBtn'),
+  eventDetailsDialog: document.querySelector('#eventDetailsDialog'),
+  eventDetailsTitle: document.querySelector('#eventDetailsTitle'),
+  eventDetailsImage: document.querySelector('#eventDetailsImage'),
+  eventDetailsDate: document.querySelector('#eventDetailsDate'),
+  eventDetailsDistance: document.querySelector('#eventDetailsDistance'),
+  eventDetailsLocation: document.querySelector('#eventDetailsLocation'),
+  eventDetailsDescription: document.querySelector('#eventDetailsDescription'),
+  closeEventDetailsBtn: document.querySelector('#closeEventDetailsBtn'),
+  eventDetailsOkBtn: document.querySelector('#eventDetailsOkBtn'),
 };
 
 function busyMainThread(ms = 340) {
@@ -91,6 +100,20 @@ function applyCurrentFilters(events) {
   });
 }
 
+function openEventDetails(eventId) {
+  const selectedEvent = state.events.find((event) => event.id === eventId);
+  if (!selectedEvent) return;
+
+  els.eventDetailsTitle.textContent = selectedEvent.title;
+  els.eventDetailsImage.src = selectedEvent.image;
+  els.eventDetailsImage.alt = `Ilustração do evento ${selectedEvent.title}`;
+  els.eventDetailsDate.textContent = selectedEvent.date;
+  els.eventDetailsDistance.textContent = `${selectedEvent.distance.toFixed(1)} km de distância`;
+  els.eventDetailsLocation.textContent = selectedEvent.location;
+  els.eventDetailsDescription.textContent = selectedEvent.description;
+  els.eventDetailsDialog.showModal();
+}
+
 async function runFilterFlow() {
   performance.mark('filter-clicked');
 
@@ -152,11 +175,14 @@ els.grid.addEventListener('click', (event) => {
     { transform: 'scale(.985)' },
     { transform: 'scale(1)' },
   ], { duration: 220 });
+  openEventDetails(Number(button.dataset.eventId));
 });
 
 els.helpBtn.addEventListener('click', () => els.helpDialog.showModal());
 els.closeHelpBtn.addEventListener('click', () => els.helpDialog.close());
 els.dialogOkBtn.addEventListener('click', () => els.helpDialog.close());
+els.closeEventDetailsBtn.addEventListener('click', () => els.eventDetailsDialog.close());
+els.eventDetailsOkBtn.addEventListener('click', () => els.eventDetailsDialog.close());
 
 async function init() {
   els.grid.innerHTML = createSkeletonCards();
