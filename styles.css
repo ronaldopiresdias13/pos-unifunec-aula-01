@@ -93,11 +93,16 @@ select { width: 100%; min-height: 46px; padding: 0 12px; border: 1px solid var(-
 .skeleton::after { content: ""; position: absolute; inset: 0; transform: translateX(-100%); background: linear-gradient(90deg, transparent, rgba(255,255,255,.7), transparent); animation: shimmer 1.2s infinite; }
 @keyframes shimmer { to { transform: translateX(100%); } }
 
-#helpDialog { border: 0; padding: 0; background: transparent; }
-#helpDialog::backdrop { background: rgba(9, 18, 34, .55); }
+#helpDialog, #eventDetailsDialog { border: 0; padding: 0; background: transparent; }
+#helpDialog::backdrop, #eventDetailsDialog::backdrop { background: rgba(9, 18, 34, .55); }
 .dialog__content { width: min(620px, calc(100vw - 32px)); padding: 24px; }
 .dialog__head { display: flex; justify-content: space-between; align-items: start; gap: 16px; }
 .dialog__content p, .dialog__content li { color: var(--muted); line-height: 1.6; }
+.event-details { max-height: calc(100vh - 32px); overflow-y: auto; }
+.event-details__image { width: 100%; height: auto; aspect-ratio: 16/9; margin-top: 18px; border-radius: 14px; object-fit: cover; background: #e9eef6; }
+.event-details__meta { display: flex; justify-content: space-between; gap: 16px; margin-top: 16px; color: var(--primary); font-size: .9rem; font-weight: 800; }
+.event-details__location { margin-bottom: 0; font-weight: 800; }
+.event-details > .primary-btn { width: 100%; margin-top: 6px; }
 
 @media (max-width: 850px) {
   .hero__badge { display: none; }
