@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Laboratório didático de performance web com catálogo de eventos." />
+  <title>Catálogo Performance Lab</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__content">
+      <a class="brand" href="#" aria-label="Performance Lab - início">
+        <span class="brand__mark" aria-hidden="true">PL</span>
+        <span>
+          <strong>Performance Lab</strong>
+          <small>Catálogo de eventos</small>
+        </span>
+      </a>
+      <button id="labHelpBtn" class="ghost-btn" type="button">Como usar o laboratório</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div>
+        <p class="eyebrow">LABORATÓRIO DIDÁTICO</p>
+        <h1>Encontre um evento para o fim de semana</h1>
+        <p class="hero__text">Use os filtros, abra detalhes e observe o comportamento da interface antes de tentar otimizar.</p>
+      </div>
+      <div class="hero__badge" aria-hidden="true">⚡</div>
+    </section>
+
+    <section class="container filter-card" aria-labelledby="filterTitle">
+      <div class="filter-card__head">
+        <div>
+          <p class="eyebrow">PERCURSO PRINCIPAL</p>
+          <h2 id="filterTitle">Filtrar eventos</h2>
+        </div>
+        <span id="resultStatus" class="status-pill" aria-live="polite">12 eventos disponíveis</span>
+      </div>
+
+      <form id="filterForm" class="filters">
+        <label>
+          <span>Categoria</span>
+          <select id="categoryFilter" name="category">
+            <option value="all">Todas</option>
+            <option value="musica">Música</option>
+            <option value="gastronomia">Gastronomia</option>
+            <option value="familia">Família</option>
+            <option value="esporte">Esporte</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Dia</span>
+          <select id="dayFilter" name="day">
+            <option value="all">Qualquer dia</option>
+            <option value="sexta">Sexta-feira</option>
+            <option value="sabado">Sábado</option>
+            <option value="domingo">Domingo</option>
+          </select>
+        </label>
+
+        <button id="applyFilters" class="primary-btn" type="submit">Aplicar filtros</button>
+      </form>
+
+      <div id="loadingState" class="loading-state" hidden>
+        <span class="spinner" aria-hidden="true"></span>
+        <span>Buscando eventos...</span>
+      </div>
+    </section>
+
+    <div id="lateBannerSlot" class="container late-banner-slot" aria-live="polite"></div>
+
+    <section class="container content-grid">
+      <div>
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">RESULTADOS</p>
+            <h2>Eventos encontrados</h2>
+          </div>
+          <button id="sortBtn" class="ghost-btn" type="button">Ordenar por distância</button>
+        </div>
+
+        <div id="eventsGrid" class="events-grid" aria-live="polite"></div>
+      </div>
+
+      <aside class="side-card">
+        <p class="eyebrow">TAREFA DO ALUNO</p>
+        <h3>Observe antes de otimizar</h3>
+        <ol>
+          <li>Escolha um percurso repetível.</li>
+          <li>Registre rede, cache e dispositivo.</li>
+          <li>Repita o percurso três vezes.</li>
+          <li>Separe fato, hipótese e evidência.</li>
+        </ol>
+        <p class="side-card__tip"><strong>Dica:</strong> abra o DevTools antes de começar.</p>
+      </aside>
+    </section>
+  </main>
+
+  <dialog id="helpDialog">
+    <div class="dialog__content">
+      <div class="dialog__head">
+        <div>
+          <p class="eyebrow">GUIA RÁPIDO</p>
+          <h2>Como usar este laboratório</h2>
+        </div>
+        <button id="closeHelpBtn" class="icon-btn" type="button" aria-label="Fechar">×</button>
+      </div>
+      <p>O catálogo contém comportamentos propositalmente imperfeitos. O objetivo é diagnosticar primeiro e só depois alterar o código.</p>
+      <ul>
+        <li>Use <strong>Network</strong> para observar quando as requisições começam e quanto duram.</li>
+        <li>Use <strong>Performance</strong> para observar trabalho na main thread e mudanças de layout.</li>
+        <li>Use <strong>Lighthouse</strong> como triagem, não como resposta final.</li>
+      </ul>
+      <button id="dialogOkBtn" class="primary-btn" type="button">Entendi</button>
+    </div>
+  </dialog>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+[
+  {"id":1,"title":"Festival de Música no Parque","category":"musica","day":"sabado","date":"Sáb • 16:00","distance":1.8,"location":"Parque Central","description":"Shows locais ao ar livre e praça de alimentação.","image":"assets/event-1.png"},
+  {"id":2,"title":"Feira Gastronômica Regional","category":"gastronomia","day":"sabado","date":"Sáb • 18:30","distance":2.4,"location":"Praça da Matriz","description":"Comidas regionais, doces e produtores locais.","image":"assets/event-2.png"},
+  {"id":3,"title":"Cinema ao Ar Livre","category":"familia","day":"sexta","date":"Sex • 19:30","distance":3.2,"location":"Centro Cultural","description":"Sessão gratuita com estrutura para toda a família.","image":"assets/event-3.png"},
+  {"id":4,"title":"Corrida 5K da Cidade","category":"esporte","day":"domingo","date":"Dom • 07:00","distance":4.1,"location":"Avenida Beira Lago","description":"Percurso urbano com categorias abertas ao público.","image":"assets/event-4.png"},
+  {"id":5,"title":"Encontro de Bandas","category":"musica","day":"domingo","date":"Dom • 17:00","distance":5.7,"location":"Concha Acústica","description":"Apresentações de bandas independentes da região.","image":"assets/event-5.png"},
+  {"id":6,"title":"Brunch de Produtores Locais","category":"gastronomia","day":"domingo","date":"Dom • 10:00","distance":6.2,"location":"Mercado Municipal","description":"Degustação, café e produtos artesanais.","image":"assets/event-6.png"},
+  {"id":7,"title":"Oficina Infantil de Ciência","category":"familia","day":"sabado","date":"Sáb • 14:00","distance":2.9,"location":"Biblioteca Municipal","description":"Experimentos simples e atividades educativas.","image":"assets/event-7.png"},
+  {"id":8,"title":"Pedal de Domingo","category":"esporte","day":"domingo","date":"Dom • 06:30","distance":7.5,"location":"Portal da Cidade","description":"Passeio ciclístico de ritmo leve e rota guiada.","image":"assets/event-8.png"},
+  {"id":9,"title":"Sarau de Sexta","category":"musica","day":"sexta","date":"Sex • 20:00","distance":1.3,"location":"Casa de Cultura","description":"Música, poesia e apresentações abertas.","image":"assets/event-9.png"},
+  {"id":10,"title":"Noite do Hambúrguer","category":"gastronomia","day":"sexta","date":"Sex • 19:00","distance":3.7,"location":"Praça de Alimentação","description":"Food trucks e votação popular dos melhores pratos.","image":"assets/event-10.png"},
+  {"id":11,"title":"Piquenique em Família","category":"familia","day":"domingo","date":"Dom • 09:00","distance":2.1,"location":"Bosque Municipal","description":"Área verde, recreação e atividades infantis.","image":"assets/event-11.png"},
+  {"id":12,"title":"Aulão Funcional","category":"esporte","day":"sabado","date":"Sáb • 08:00","distance":4.8,"location":"Ginásio Municipal","description":"Treino coletivo gratuito com acompanhamento.","image":"assets/event-12.png"}
+]
