@@ -52,7 +52,7 @@ function renderEvents(events) {
   els.grid.innerHTML = events.map((event, index) => `
     <article class="event-card">
       <div class="event-card__image-wrap">
-        <img src="${event.image}" alt="Ilustração do evento ${event.title}" width="1200" height="675" />
+        <img src="${event.image.replace(".webp", "-large.webp")}" alt="Ilustração do evento ${event.title}" width="1200" height="675" />
       </div>
       <div class="event-card__body">
         <div class="event-card__meta">
