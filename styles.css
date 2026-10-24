@@ -67,8 +67,9 @@ select { width: 100%; min-height: 46px; padding: 0 12px; border: 1px solid var(-
 .spinner { width: 18px; height: 18px; border: 3px solid #dbe6ff; border-top-color: var(--primary); border-radius: 50%; animation: spin .75s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-.late-banner-slot { min-height: 0; }
+.late-banner-slot { min-height: 94px; }
 .promo-banner { margin-top: 18px; padding: 18px 22px; border-radius: 18px; color: #5c3400; background: #fff3d8; border: 1px solid #f7d69a; box-shadow: var(--shadow); }
+.primary-btn:disabled { opacity: .72; cursor: wait; }
 .promo-banner strong { display: block; margin-bottom: 4px; }
 
 .content-grid { padding: 28px 0 72px; display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 24px; align-items: start; }
