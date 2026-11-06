@@ -67,7 +67,7 @@ select { width: 100%; min-height: 46px; padding: 0 12px; border: 1px solid var(-
 .spinner { width: 18px; height: 18px; border: 3px solid #dbe6ff; border-top-color: var(--primary); border-radius: 50%; animation: spin .75s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-.late-banner-slot { min-height: 0; }
+.filters[data-catalog="pending"] .primary-btn { opacity: .55; cursor: progress; }
 .promo-banner { margin-top: 18px; padding: 18px 22px; border-radius: 18px; color: #5c3400; background: #fff3d8; border: 1px solid #f7d69a; box-shadow: var(--shadow); }
 .promo-banner strong { display: block; margin-bottom: 4px; }
 
