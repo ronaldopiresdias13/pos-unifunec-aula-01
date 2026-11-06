@@ -1,3 +1,8 @@
+# Atividade Final Valdeci
+Link: [ATIVIDADE_FINAL.md](https://github.com/valdecimpj/pos-unifunec-performance-avancada-aula-01/blob/valdeci/ATIVIDADE_FINAL.md)
+#
+#
+#
 # Performance Lab — Catálogo de Eventos
 
 Projeto estático em **HTML, CSS e JavaScript** criado para aula de Performance Web Avançada.
