@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="906" height="288" viewBox="0 0 906 288">
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="16" y="22" font-size="16" font-family="ui-sans-serif, system-ui, sans-serif" font-weight="700" fill="#14213d">CSR — caminho até a imagem de LCP</text>
+  <line x1="250" y1="46" x2="250" y2="272" stroke="#e4eaf2"/>
+    <text x="250" y="42" font-size="11" font-family="ui-sans-serif, system-ui, sans-serif" fill="#667085" text-anchor="middle">0 ms</text>
+<line x1="427.1428571428571" y1="46" x2="427.1428571428571" y2="272" stroke="#e4eaf2"/>
+    <text x="427.1428571428571" y="42" font-size="11" font-family="ui-sans-serif, system-ui, sans-serif" fill="#667085" text-anchor="middle">20 ms</text>
+<line x1="604.2857142857142" y1="46" x2="604.2857142857142" y2="272" stroke="#e4eaf2"/>
+    <text x="604.2857142857142" y="42" font-size="11" font-family="ui-sans-serif, system-ui, sans-serif" fill="#667085" text-anchor="middle">40 ms</text>
+<line x1="781.4285714285714" y1="46" x2="781.4285714285714" y2="272" stroke="#e4eaf2"/>
+    <text x="781.4285714285714" y="42" font-size="11" font-family="ui-sans-serif, system-ui, sans-serif" fill="#667085" text-anchor="middle">60 ms</text>
+  <text x="16" y="72" font-size="13" font-family="ui-monospace, monospace" fill="#14213d">/csr/</text>
+    <rect x="258.6" y="58" width="13.1" height="20" rx="4" fill="#1d4ed8" />
+    <text x="277.7" y="72" font-size="12" font-family="ui-sans-serif, system-ui, sans-serif" fill="#14213d">1 ms</text>
+<text x="16" y="114" font-size="13" font-family="ui-monospace, monospace" fill="#14213d">/csr/styles.css</text>
+    <rect x="356.6" y="100" width="12.8" height="20" rx="4" fill="#7c3aed" />
+    <text x="375.4" y="114" font-size="12" font-family="ui-sans-serif, system-ui, sans-serif" fill="#14213d">12 ms</text>
+<text x="16" y="156" font-size="13" font-family="ui-monospace, monospace" fill="#14213d">/csr/app.js</text>
+    <rect x="362.2" y="142" width="12.7" height="20" rx="4" fill="#b45309" />
+    <text x="380.9" y="156" font-size="12" font-family="ui-sans-serif, system-ui, sans-serif" fill="#14213d">13 ms</text>
+<text x="16" y="198" font-size="13" font-family="ui-monospace, monospace" fill="#14213d">/csr/data/events.json</text>
+    <rect x="572.4" y="184" width="67.8" height="20" rx="4" fill="#157347" />
+    <text x="646.2" y="198" font-size="12" font-family="ui-sans-serif, system-ui, sans-serif" fill="#14213d">36 ms</text>
+<text x="16" y="240" font-size="13" font-family="ui-monospace, monospace" fill="#14213d">/csr/assets/event-1.png</text>
+    <rect x="706.9" y="226" width="41.7" height="20" rx="4" fill="#0f766e" />
+    <text x="754.6" y="240" font-size="12" font-family="ui-sans-serif, system-ui, sans-serif" fill="#14213d">52 ms</text>
+</svg>

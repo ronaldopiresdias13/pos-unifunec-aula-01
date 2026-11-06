@@ -1,5 +1,7 @@
 # Performance Lab — Catálogo de Eventos
 
+A entrega da aula 3 está em [`aula-03/`](aula-03/README.md): a matriz CSR × SSR × SSG e a mesma página em CSR e SSG.
+
 Projeto estático em **HTML, CSS e JavaScript** criado para aula de Performance Web Avançada.
 
 A aplicação contém alguns comportamentos propositalmente imperfeitos para que os alunos pratiquem **observação, diagnóstico e uso do Chrome DevTools antes de alterar o código**.

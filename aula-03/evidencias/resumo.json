@@ -1,0 +1,398 @@
+{
+  "protocol": {
+    "port": 4173,
+    "runs": 3,
+    "preset": "desktop",
+    "cache": "no-store no servidor; Lighthouse limpa o perfil a cada rodada",
+    "gzip": false,
+    "server": "Node estático em dist/, sem live reload e sem source map"
+  },
+  "files": {
+    "csrHtml": 3420,
+    "ssgHtml": 13906,
+    "csrJs": 4955,
+    "ssgJs": 2931,
+    "eventsJson": 2938,
+    "lcpImage": 646752,
+    "css": 5141
+  },
+  "versions": {
+    "csr": {
+      "lcpObserved": [
+        176,
+        141,
+        138
+      ],
+      "lcpSimulated": [
+        2311,
+        2304,
+        2304
+      ],
+      "scores": [
+        88,
+        88,
+        88
+      ],
+      "median": {
+        "score": 88,
+        "lcpObserved": 141,
+        "lcpSimulated": 2304,
+        "lcpDisplay": "2.3 s",
+        "fcpObserved": 68,
+        "ttfbObserved": 0,
+        "lcpElement": null,
+        "consoleErrors": [],
+        "requests": [
+          {
+            "url": "http://127.0.0.1:4173/csr/",
+            "resourceType": "Document",
+            "start": 0.9690000005066395,
+            "end": 2.4479999989271164,
+            "transferSize": 3628,
+            "status": 200,
+            "mime": "text/html"
+          },
+          {
+            "url": "http://127.0.0.1:4173/csr/styles.css",
+            "resourceType": "Stylesheet",
+            "start": 12.033999998122454,
+            "end": 13.483999997377396,
+            "transferSize": 5349,
+            "status": 200,
+            "mime": "text/css"
+          },
+          {
+            "url": "http://127.0.0.1:4173/csr/app.js",
+            "resourceType": "Script",
+            "start": 12.671000000089407,
+            "end": 14.10699999704957,
+            "transferSize": 5170,
+            "status": 200,
+            "mime": "text/javascript"
+          },
+          {
+            "url": "http://127.0.0.1:4173/csr/data/events.json",
+            "resourceType": "Fetch",
+            "start": 36.394999999552965,
+            "end": 44.05399999767542,
+            "transferSize": 3138,
+            "status": 200,
+            "mime": "application/json"
+          },
+          {
+            "url": "http://127.0.0.1:4173/csr/assets/event-1.png",
+            "resourceType": "Image",
+            "start": 51.58599999547005,
+            "end": 56.29299999773502,
+            "transferSize": 646947,
+            "status": 200,
+            "mime": "image/png"
+          },
+          {
+            "url": "http://127.0.0.1:4173/favicon.ico",
+            "resourceType": "Other",
+            "start": 53,
+            "end": 55.54299999773502,
+            "transferSize": 157,
+            "status": 404,
+            "mime": "text/plain"
+          },
+          {
+            "url": "http://127.0.0.1:4173/csr/assets/event-2.png",
+            "resourceType": "Image",
+            "start": 77.30299999937415,
+            "end": 96.68600000068545,
+            "transferSize": 652902,
+            "status": 200,
+            "mime": "image/png"
+          },
+          {
+            "url": "http://127.0.0.1:4173/csr/assets/event-3.png",
+            "resourceType": "Image",
+            "start": 77.63499999791384,
+            "end": 100.66899999976158,
+            "transferSize": 672885,
+            "status": 200,
+            "mime": "image/png"
+          },
+          {
+            "url": "http://127.0.0.1:4173/csr/assets/event-4.png",
+            "resourceType": "Image",
+            "start": 78.05599999800324,
+            "end": 115.37400000169873,
+            "transferSize": 621338,
+            "status": 200,
+            "mime": "image/png"
+          },
+          {
+            "url": "http://127.0.0.1:4173/csr/assets/event-5.png",
+            "resourceType": "Image",
+            "start": 82.19099999591708,
+            "end": 119.3179999999702,
+            "transferSize": 635446,
+            "status": 200,
+            "mime": "image/png"
+          },
+          {
+            "url": "http://127.0.0.1:4173/csr/assets/event-6.png",
+            "resourceType": "Image",
+            "start": 84.92299999669194,
+            "end": 122.90899999812245,
+            "transferSize": 648617,
+            "status": 200,
+            "mime": "image/png"
+          },
+          {
+            "url": "http://127.0.0.1:4173/csr/assets/event-7.png",
+            "resourceType": "Image",
+            "start": 86.87099999934435,
+            "end": 124.9619999974966,
+            "transferSize": 636120,
+            "status": 200,
+            "mime": "image/png"
+          },
+          {
+            "url": "http://127.0.0.1:4173/csr/assets/event-8.png",
+            "resourceType": "Image",
+            "start": 97.97999999672174,
+            "end": 124.20600000023842,
+            "transferSize": 632578,
+            "status": 200,
+            "mime": "image/png"
+          },
+          {
+            "url": "http://127.0.0.1:4173/csr/assets/event-9.png",
+            "resourceType": "Image",
+            "start": 101.82000000029802,
+            "end": 126.56199999526143,
+            "transferSize": 637850,
+            "status": 200,
+            "mime": "image/png"
+          },
+          {
+            "url": "http://127.0.0.1:4173/csr/assets/event-10.png",
+            "resourceType": "Image",
+            "start": 117.0409999974072,
+            "end": 129.3859999999404,
+            "transferSize": 635962,
+            "status": 200,
+            "mime": "image/png"
+          },
+          {
+            "url": "http://127.0.0.1:4173/csr/assets/event-11.png",
+            "resourceType": "Image",
+            "start": 120.17700000107288,
+            "end": 130.2769999988377,
+            "transferSize": 631052,
+            "status": 200,
+            "mime": "image/png"
+          },
+          {
+            "url": "http://127.0.0.1:4173/csr/assets/event-12.png",
+            "resourceType": "Image",
+            "start": 124.6629999987781,
+            "end": 131.00699999928474,
+            "transferSize": 616804,
+            "status": 200,
+            "mime": "image/png"
+          }
+        ],
+        "htmlReport": "/home/davi/Documentos/studies/unifunec/pos-graduacao/desenvolvimento-web/performance-web-avancada/2026-11-06/pos-unifunec-aula-03/evidencias/csr-lighthouse.html",
+        "throttling": {
+          "rttMs": 40,
+          "throughputKbps": 10240,
+          "requestLatencyMs": 0,
+          "downloadThroughputKbps": 0,
+          "uploadThroughputKbps": 0,
+          "cpuSlowdownMultiplier": 1
+        },
+        "formFactor": "desktop",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+      }
+    },
+    "ssg": {
+      "lcpObserved": [
+        108,
+        101,
+        178
+      ],
+      "lcpSimulated": [
+        2286,
+        2267,
+        2287
+      ],
+      "scores": [
+        88,
+        89,
+        88
+      ],
+      "median": {
+        "score": 88,
+        "lcpObserved": 108,
+        "lcpSimulated": 2286,
+        "lcpDisplay": "2.3 s",
+        "fcpObserved": 108,
+        "ttfbObserved": 0,
+        "lcpElement": null,
+        "consoleErrors": [],
+        "requests": [
+          {
+            "url": "http://127.0.0.1:4173/ssg/",
+            "resourceType": "Document",
+            "start": 1.1200000010430813,
+            "end": 2.5610000044107437,
+            "transferSize": 14115,
+            "status": 200,
+            "mime": "text/html"
+          },
+          {
+            "url": "http://127.0.0.1:4173/ssg/styles.css",
+            "resourceType": "Stylesheet",
+            "start": 14.05400000140071,
+            "end": 16.019000001251698,
+            "transferSize": 5349,
+            "status": 200,
+            "mime": "text/css"
+          },
+          {
+            "url": "http://127.0.0.1:4173/ssg/assets/event-1.png",
+            "resourceType": "Image",
+            "start": 14.810000002384186,
+            "end": 22.907999999821186,
+            "transferSize": 646947,
+            "status": 200,
+            "mime": "image/png"
+          },
+          {
+            "url": "http://127.0.0.1:4173/ssg/app.js",
+            "resourceType": "Script",
+            "start": 15.135999999940395,
+            "end": 21.528000004589558,
+            "transferSize": 3145,
+            "status": 200,
+            "mime": "text/javascript"
+          },
+          {
+            "url": "http://127.0.0.1:4173/ssg/assets/event-2.png",
+            "resourceType": "Image",
+            "start": 50.99000000208616,
+            "end": 70.54900000244379,
+            "transferSize": 652902,
+            "status": 200,
+            "mime": "image/png"
+          },
+          {
+            "url": "http://127.0.0.1:4173/ssg/assets/event-3.png",
+            "resourceType": "Image",
+            "start": 51.57899999991059,
+            "end": 78.25300000235438,
+            "transferSize": 672885,
+            "status": 200,
+            "mime": "image/png"
+          },
+          {
+            "url": "http://127.0.0.1:4173/ssg/assets/event-4.png",
+            "resourceType": "Image",
+            "start": 51.88000000268221,
+            "end": 91.64500000327826,
+            "transferSize": 621338,
+            "status": 200,
+            "mime": "image/png"
+          },
+          {
+            "url": "http://127.0.0.1:4173/ssg/assets/event-5.png",
+            "resourceType": "Image",
+            "start": 52.186000004410744,
+            "end": 98.8230000026524,
+            "transferSize": 635446,
+            "status": 200,
+            "mime": "image/png"
+          },
+          {
+            "url": "http://127.0.0.1:4173/ssg/assets/event-6.png",
+            "resourceType": "Image",
+            "start": 52.791999999433756,
+            "end": 101.7800000011921,
+            "transferSize": 648617,
+            "status": 200,
+            "mime": "image/png"
+          },
+          {
+            "url": "http://127.0.0.1:4173/ssg/assets/event-7.png",
+            "resourceType": "Image",
+            "start": 53.88699999824166,
+            "end": 103.66100000217557,
+            "transferSize": 636120,
+            "status": 200,
+            "mime": "image/png"
+          },
+          {
+            "url": "http://127.0.0.1:4173/ssg/assets/event-8.png",
+            "resourceType": "Image",
+            "start": 77.7120000012219,
+            "end": 105.97599999979138,
+            "transferSize": 632578,
+            "status": 200,
+            "mime": "image/png"
+          },
+          {
+            "url": "http://127.0.0.1:4173/ssg/assets/event-9.png",
+            "resourceType": "Image",
+            "start": 79.55400000140071,
+            "end": 106.83000000193715,
+            "transferSize": 637850,
+            "status": 200,
+            "mime": "image/png"
+          },
+          {
+            "url": "http://127.0.0.1:4173/ssg/assets/event-10.png",
+            "resourceType": "Image",
+            "start": 94.27900000289083,
+            "end": 107.75600000470877,
+            "transferSize": 635962,
+            "status": 200,
+            "mime": "image/png"
+          },
+          {
+            "url": "http://127.0.0.1:4173/ssg/assets/event-11.png",
+            "resourceType": "Image",
+            "start": 100.5650000013411,
+            "end": 108.81600000336766,
+            "transferSize": 631052,
+            "status": 200,
+            "mime": "image/png"
+          },
+          {
+            "url": "http://127.0.0.1:4173/ssg/assets/event-12.png",
+            "resourceType": "Image",
+            "start": 103.14300000295043,
+            "end": 114.96400000154972,
+            "transferSize": 616804,
+            "status": 200,
+            "mime": "image/png"
+          },
+          {
+            "url": "http://127.0.0.1:4173/favicon.ico",
+            "resourceType": "Other",
+            "start": 65.1550000011921,
+            "end": 76.53500000014901,
+            "transferSize": 157,
+            "status": 404,
+            "mime": "text/plain"
+          }
+        ],
+        "htmlReport": "/home/davi/Documentos/studies/unifunec/pos-graduacao/desenvolvimento-web/performance-web-avancada/2026-11-06/pos-unifunec-aula-03/evidencias/ssg-lighthouse.html",
+        "throttling": {
+          "rttMs": 40,
+          "throughputKbps": 10240,
+          "requestLatencyMs": 0,
+          "downloadThroughputKbps": 0,
+          "uploadThroughputKbps": 0,
+          "cpuSlowdownMultiplier": 1
+        },
+        "formFactor": "desktop",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36"
+      }
+    }
+  }
+}
