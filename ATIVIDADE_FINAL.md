@@ -53,7 +53,8 @@
     [2, 4, 5, 6]
 # Parte 2 - Análise CSR × SSR/SSG
 A aplicação está em /src/app-e-commerce-home-page e se trata de uma aplicação NextJs com duas páginas representando uma home page de e-commerce que exibe alguns produtos. Uma delas utilizando server rendering e a outra client rendering.\
-Os produtos vem de um stub e foi adicionado um delay intencional de 200 milissegundos para simular uma busca no banco de dados.
+Os produtos vem de um stub e foi adicionado um delay intencional de 200 milissegundos para simular uma busca no banco de dados.\
+<img width="1475" height="702" alt="image" src="https://github.com/user-attachments/assets/af9fcebe-d917-458a-9733-67529c99b241" />
 ## SSR
 - **HTML inicial**\
     O HTML inicial contém o conteúdo da página:\
