@@ -62,15 +62,6 @@ select { width: 100%; min-height: 46px; padding: 0 12px; border: 1px solid var(-
 .primary-btn:hover { background: var(--primary-dark); }
 .ghost-btn { background: #fff; border-color: var(--line); color: var(--text); font-weight: 700; }
 .icon-btn { width: 44px; padding: 0; background: #fff; border-color: var(--line); font-size: 1.35rem; }
-.loading-state { margin-top: 18px; display: inline-flex; align-items: center; gap: 10px; color: var(--muted); }
-.loading-state[hidden] { display: none; }
-.spinner { width: 18px; height: 18px; border: 3px solid #dbe6ff; border-top-color: var(--primary); border-radius: 50%; animation: spin .75s linear infinite; }
-@keyframes spin { to { transform: rotate(360deg); } }
-
-.late-banner-slot { min-height: 0; }
-.promo-banner { margin-top: 18px; padding: 18px 22px; border-radius: 18px; color: #5c3400; background: #fff3d8; border: 1px solid #f7d69a; box-shadow: var(--shadow); }
-.promo-banner strong { display: block; margin-bottom: 4px; }
-
 .content-grid { padding: 28px 0 72px; display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 24px; align-items: start; }
 .section-head { margin-bottom: 18px; }
 .events-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
@@ -88,10 +79,6 @@ select { width: 100%; min-height: 46px; padding: 0 12px; border: 1px solid var(-
 .side-card ol { padding-left: 20px; color: var(--muted); line-height: 1.7; }
 .side-card__tip { padding: 12px; border-radius: 12px; background: #f7f9fc; color: var(--muted); }
 .empty-state { grid-column: 1 / -1; padding: 42px 20px; text-align: center; border: 1px dashed #cfd8e6; border-radius: 18px; color: var(--muted); }
-
-.skeleton { position: relative; overflow: hidden; background: #e9eef6; }
-.skeleton::after { content: ""; position: absolute; inset: 0; transform: translateX(-100%); background: linear-gradient(90deg, transparent, rgba(255,255,255,.7), transparent); animation: shimmer 1.2s infinite; }
-@keyframes shimmer { to { transform: translateX(100%); } }
 
 #helpDialog, #eventDetailsDialog { border: 0; padding: 0; background: transparent; }
 #helpDialog::backdrop, #eventDetailsDialog::backdrop { background: rgba(9, 18, 34, .55); }
