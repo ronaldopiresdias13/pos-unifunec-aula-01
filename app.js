@@ -2,7 +2,6 @@ const state = {
   events: [],
   filtered: [],
   sortAsc: true,
-  requestCount: 0,
 };
 
 const els = {
@@ -10,10 +9,8 @@ const els = {
   category: document.querySelector('#categoryFilter'),
   day: document.querySelector('#dayFilter'),
   button: document.querySelector('#applyFilters'),
-  loading: document.querySelector('#loadingState'),
   grid: document.querySelector('#eventsGrid'),
   status: document.querySelector('#resultStatus'),
-  bannerSlot: document.querySelector('#lateBannerSlot'),
   sortBtn: document.querySelector('#sortBtn'),
   helpBtn: document.querySelector('#labHelpBtn'),
   helpDialog: document.querySelector('#helpDialog'),
@@ -30,16 +27,6 @@ const els = {
   eventDetailsOkBtn: document.querySelector('#eventDetailsOkBtn'),
 };
 
-function busyMainThread(ms = 340) {
-  // PROPOSITAL: simula trabalho síncrono pesado para o laboratório.
-  const start = performance.now();
-  let acc = 0;
-  while (performance.now() - start < ms) {
-    for (let i = 1; i < 3000; i += 1) acc += Math.sqrt(i * Math.random());
-  }
-  return acc;
-}
-
 function createSkeletonCards(count = 6) {
   return Array.from({ length: count }, () => `
     <article class="event-card" aria-hidden="true">
@@ -53,6 +40,12 @@ function createSkeletonCards(count = 6) {
     </article>`).join('');
 }
 
+function imageAttrs(index) {
+  if (index === 0) return 'fetchpriority="high" loading="eager"';
+  if (index === 1) return 'loading="eager" decoding="async"';
+  return 'loading="lazy" decoding="async"';
+}
+
 function renderEvents(events) {
   if (!events.length) {
     els.grid.innerHTML = '<div class="empty-state">Nenhum evento encontrado para estes filtros.</div>';
@@ -62,7 +55,7 @@ function renderEvents(events) {
   els.grid.innerHTML = events.map((event, index) => `
     <article class="event-card">
       <div class="event-card__image-wrap">
-        <img data-src="${event.image}" alt="Ilustração do evento ${event.title}" width="1200" height="675" />
+        <img src="${event.image}" alt="Ilustração do evento ${event.title}" width="1200" height="675" ${imageAttrs(index)} />
       </div>
       <div class="event-card__body">
         <div class="event-card__meta">
@@ -75,21 +68,6 @@ function renderEvents(events) {
       </div>
     </article>
   `).join('');
-
-  // PROPOSITAL: imagens são iniciadas de forma escalonada, não imediatamente.
-  [...els.grid.querySelectorAll('img[data-src]')].forEach((img, index) => {
-    window.setTimeout(() => {
-      img.src = img.dataset.src;
-      img.removeAttribute('data-src');
-    }, 180 + index * 140);
-  });
-}
-
-async function fetchEvents() {
-  state.requestCount += 1;
-  const response = await fetch(`data/events.json?run=${state.requestCount}`, { cache: 'no-store' });
-  if (!response.ok) throw new Error('Falha ao carregar eventos');
-  return response.json();
 }
 
 function applyCurrentFilters(events) {
@@ -114,48 +92,18 @@ function openEventDetails(eventId) {
   els.eventDetailsDialog.showModal();
 }
 
-async function runFilterFlow() {
+function runFilterFlow() {
   performance.mark('filter-clicked');
-
-  // PROPOSITAL: por alguns instantes o botão não dá feedback visual claro.
-  await new Promise((resolve) => setTimeout(resolve, 650));
-
-  els.loading.hidden = false;
-  els.grid.innerHTML = createSkeletonCards();
-  els.status.textContent = 'Consultando...';
-  performance.mark('loading-visible');
-
-  // PROPOSITAL: trabalho bloqueante antes da requisição.
-  busyMainThread(320);
-  performance.mark('before-request');
-
-  try {
-    const data = await fetchEvents();
-    performance.mark('response-received');
-
-    // PROPOSITAL: atraso adicional após a resposta para diferenciar rede x renderização.
-    await new Promise((resolve) => setTimeout(resolve, 700));
-
-    state.events = data;
-    state.filtered = applyCurrentFilters(data);
-    renderEvents(state.filtered);
-    els.status.textContent = `${state.filtered.length} eventos encontrados`;
-    performance.mark('results-usable');
-    performance.measure('tempo-ate-feedback', 'filter-clicked', 'loading-visible');
-    performance.measure('tempo-antes-request', 'filter-clicked', 'before-request');
-    performance.measure('tempo-request', 'before-request', 'response-received');
-    performance.measure('tempo-ate-resultados', 'filter-clicked', 'results-usable');
-  } catch (error) {
-    els.grid.innerHTML = '<div class="empty-state">Não foi possível carregar os eventos. Tente novamente.</div>';
-    els.status.textContent = 'Falha na consulta';
-    console.error(error);
-  } finally {
-    els.loading.hidden = true;
-  }
+  state.filtered = applyCurrentFilters(state.events);
+  renderEvents(state.filtered);
+  els.status.textContent = `${state.filtered.length} eventos encontrados`;
+  performance.mark('results-usable');
+  performance.measure('tempo-ate-resultados', 'filter-clicked', 'results-usable');
 }
 
 els.form.addEventListener('submit', (event) => {
   event.preventDefault();
+  if (els.button.disabled) return;
   runFilterFlow();
 });
 
@@ -185,26 +133,24 @@ els.closeEventDetailsBtn.addEventListener('click', () => els.eventDetailsDialog.
 els.eventDetailsOkBtn.addEventListener('click', () => els.eventDetailsDialog.close());
 
 async function init() {
+  els.form.dataset.catalog = 'pending';
+  els.button.disabled = true;
   els.grid.innerHTML = createSkeletonCards();
   try {
-    const data = await fetchEvents();
+    const response = await fetch('data/events.json');
+    if (!response.ok) throw new Error('Falha ao carregar eventos');
+    const data = await response.json();
     state.events = data;
     state.filtered = data;
     renderEvents(data);
     els.status.textContent = `${data.length} eventos disponíveis`;
+    performance.mark('catalog-loaded');
+    els.form.dataset.catalog = 'ready';
+    els.button.disabled = false;
   } catch (error) {
     els.grid.innerHTML = '<div class="empty-state">Falha ao carregar o catálogo inicial.</div>';
     console.error(error);
   }
-
-  // PROPOSITAL: banner tardio inserido acima dos resultados, causando deslocamento de layout.
-  window.setTimeout(() => {
-    els.bannerSlot.innerHTML = `
-      <div class="promo-banner">
-        <strong>Novidade do fim de semana</strong>
-        Uma programação especial acabou de ser adicionada ao catálogo.
-      </div>`;
-  }, 2400);
 }
 
 init();
