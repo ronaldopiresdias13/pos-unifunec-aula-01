@@ -9,6 +9,13 @@ Agência fictícia: **Horizonte Verde Turismo**.
 
 ---
 
+## Documentação da atividade
+
+- [Matriz de decisão (CSR × SSR × SSG)](01-matriz-de-decisao.md) — critérios e estratégia por cenário (landing, e-commerce, notícias, painel, autenticado, híbrido).
+- [Análise antes × depois](02-analise-antes-depois.md) — comparação CSR e SSR no Pacote Pantanal (HTML inicial, waterfall, JS, LCP e hydration).
+
+---
+
 ## Como instalar e rodar
 
 Requisito: **Node.js 20+**.
@@ -49,6 +56,8 @@ atividade-aula-3/
 ├── package.json
 ├── server.js
 ├── README.md
+├── 01-matriz-de-decisao.md
+├── 02-analise-antes-depois.md
 ├── data/
 │   └── pacotes.json
 ├── scripts/

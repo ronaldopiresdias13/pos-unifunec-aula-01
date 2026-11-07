@@ -27,6 +27,7 @@ Depois:
 - `data/events.json` — dados usados pela consulta
 - `assets/` — imagens locais dos eventos
 - `STUDENT_TASK.md` — atividade para os alunos
+- `atividade-aula-3/` — atividade 3: comparação CSR × SSR (Horizonte Verde Turismo); ver detalhes em [`atividade-aula-3/README.md`](atividade-aula-3/README.md)
 
 ## Rodar localmente
 
