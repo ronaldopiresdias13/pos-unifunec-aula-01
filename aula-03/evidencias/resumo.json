@@ -1,0 +1,217 @@
+{
+  "measuredAt": "2026-11-07T01:32:38.681Z",
+  "conditions": {
+    "server": "http://127.0.0.1:4727",
+    "cache": "disabled",
+    "latencyMs": 40,
+    "downloadBytesPerSec": 1280000,
+    "runs": 3
+  },
+  "files": {
+    "csrHtml": {
+      "bytes": 1988,
+      "hasFestival": false,
+      "hasEventsJson": false
+    },
+    "ssgHtml": {
+      "bytes": 11256,
+      "hasFestival": true,
+      "hasEventsJson": false
+    },
+    "csrJs": {
+      "bytes": 3807,
+      "hasFestival": false,
+      "hasEventsJson": true
+    },
+    "ssgJs": {
+      "bytes": 2021,
+      "hasFestival": false,
+      "hasEventsJson": false
+    },
+    "csrJson": {
+      "bytes": 2900,
+      "hasFestival": true,
+      "hasEventsJson": false
+    },
+    "css": {
+      "bytes": 3266,
+      "hasFestival": false,
+      "hasEventsJson": false
+    },
+    "image": {
+      "bytes": 646752,
+      "hasFestival": false,
+      "hasEventsJson": false
+    }
+  },
+  "csr": {
+    "lcp": [
+      3236,
+      3248,
+      3268
+    ],
+    "medianLcp": 3248,
+    "median": {
+      "lcp": 3248,
+      "lcpUrl": "http://127.0.0.1:4727/assets/event-2.png",
+      "cards": 12,
+      "saturday": "4 eventos encontrados",
+      "empty": "0 eventos encontrados",
+      "includesFestival": true,
+      "detailOpen": true,
+      "detailTitle": "Festival de Música no Parque",
+      "exceptions": [],
+      "requests": [
+        {
+          "url": "/aula-03/dist/csr/",
+          "type": "Document",
+          "startMs": 0,
+          "encoded": 2175
+        },
+        {
+          "url": "/aula-03/dist/csr/styles.css",
+          "type": "Stylesheet",
+          "startMs": 46,
+          "encoded": 3452
+        },
+        {
+          "url": "/aula-03/dist/csr/app.js",
+          "type": "Script",
+          "startMs": 46,
+          "encoded": 4000
+        },
+        {
+          "url": "/aula-03/dist/csr/data/events.json",
+          "type": "Fetch",
+          "startMs": 96,
+          "encoded": 3094
+        },
+        {
+          "url": "/assets/event-1.png",
+          "type": "Image",
+          "startMs": 142,
+          "encoded": 646941
+        },
+        {
+          "url": "/assets/event-2.png",
+          "type": "Image",
+          "startMs": 162,
+          "encoded": 652896
+        }
+      ]
+    },
+    "withoutJs": {
+      "lcp": null,
+      "lcpUrl": "",
+      "cards": 0,
+      "saturday": null,
+      "empty": null,
+      "includesFestival": false,
+      "detailOpen": false,
+      "detailTitle": "",
+      "exceptions": [],
+      "requests": [
+        {
+          "url": "/aula-03/dist/csr/",
+          "type": "Document",
+          "startMs": 0,
+          "encoded": 2175
+        },
+        {
+          "url": "/aula-03/dist/csr/styles.css",
+          "type": "Stylesheet",
+          "startMs": 46,
+          "encoded": 3452
+        }
+      ]
+    }
+  },
+  "ssg": {
+    "lcp": [
+      3192,
+      3192,
+      3204
+    ],
+    "medianLcp": 3192,
+    "median": {
+      "lcp": 3192,
+      "lcpUrl": "http://127.0.0.1:4727/assets/event-2.png",
+      "cards": 12,
+      "saturday": "4 eventos encontrados",
+      "empty": "0 eventos encontrados",
+      "includesFestival": true,
+      "detailOpen": true,
+      "detailTitle": "Festival de Música no Parque",
+      "exceptions": [],
+      "requests": [
+        {
+          "url": "/aula-03/dist/ssg/",
+          "type": "Document",
+          "startMs": 0,
+          "encoded": 11444
+        },
+        {
+          "url": "/aula-03/dist/ssg/styles.css",
+          "type": "Stylesheet",
+          "startMs": 46,
+          "encoded": 3452
+        },
+        {
+          "url": "/assets/event-1.png",
+          "type": "Image",
+          "startMs": 46,
+          "encoded": 646941
+        },
+        {
+          "url": "/aula-03/dist/ssg/app.js",
+          "type": "Script",
+          "startMs": 52,
+          "encoded": 2214
+        },
+        {
+          "url": "/assets/event-2.png",
+          "type": "Image",
+          "startMs": 103,
+          "encoded": 652896
+        }
+      ]
+    },
+    "withoutJs": {
+      "lcp": null,
+      "lcpUrl": "",
+      "cards": 12,
+      "saturday": null,
+      "empty": null,
+      "includesFestival": true,
+      "detailOpen": false,
+      "detailTitle": "",
+      "exceptions": [],
+      "requests": [
+        {
+          "url": "/aula-03/dist/ssg/",
+          "type": "Document",
+          "startMs": 0,
+          "encoded": 11444
+        },
+        {
+          "url": "/aula-03/dist/ssg/styles.css",
+          "type": "Stylesheet",
+          "startMs": 46,
+          "encoded": 3452
+        },
+        {
+          "url": "/assets/event-1.png",
+          "type": "Image",
+          "startMs": 48,
+          "encoded": 646941
+        },
+        {
+          "url": "/assets/event-2.png",
+          "type": "Image",
+          "startMs": 48,
+          "encoded": 652896
+        }
+      ]
+    }
+  }
+}
