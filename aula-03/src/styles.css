@@ -1,0 +1,186 @@
+:root {
+  color-scheme: light;
+  --ink: #1c1915;
+  --muted: #5e584f;
+  --line: #e4dccf;
+  --paper: #f7f1e7;
+  --card: #fffdf8;
+  --accent: #0f6e56;
+  --accent-ink: #e7f6f1;
+  --warn: #8a3d12;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, #fff 0, transparent 28rem),
+    var(--paper);
+}
+
+.wrap {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+header {
+  padding: 2.2rem 0 1rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.4rem;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+}
+
+.lede {
+  max-width: 40rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.badge {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-family: "Segoe UI", sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  vertical-align: 0.4rem;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin: 1rem 0 1.2rem;
+  padding: 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 253, 248, 0.9);
+}
+
+label {
+  display: grid;
+  gap: 0.3rem;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+select, button {
+  font: inherit;
+}
+
+select {
+  padding: 0.55rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: white;
+  color: var(--ink);
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  background: var(--ink);
+  color: #f7f1e7;
+  font-family: "Segoe UI", sans-serif;
+  cursor: pointer;
+}
+
+button:hover { background: var(--accent); }
+
+#status {
+  min-height: 1.4rem;
+  margin: 0 0 0.8rem;
+  font-family: "Segoe UI", sans-serif;
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding-bottom: 3rem;
+}
+
+.card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--card);
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #ddd4c6;
+}
+
+.card-body { padding: 0.9rem 1rem 1rem; }
+
+.meta, .distance {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.card h2 {
+  margin: 0.25rem 0 0.4rem;
+  font-size: 1.35rem;
+  line-height: 1.15;
+}
+
+.card p { margin: 0.2rem 0; }
+
+.detail {
+  margin-top: 0.8rem;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.detail:hover { color: white; }
+
+dialog {
+  width: min(32rem, calc(100% - 2rem));
+  border: 0;
+  border-radius: 18px;
+  padding: 1.2rem;
+}
+
+dialog::backdrop { background: rgba(28, 25, 21, 0.45); }
+
+dialog h2 { margin-top: 0; }
+
+@media (min-width: 720px) {
+  form { grid-template-columns: 1fr 1fr 1fr auto; align-items: end; }
+  .grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 1040px) {
+  .grid { grid-template-columns: 1fr 1fr 1fr; }
+}
