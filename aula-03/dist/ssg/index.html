@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo de eventos — SSG</title>
+  <meta name="description" content="Catálogo gerado no build. O HTML inicial já traz os 12 eventos.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="wrap">
+    <p class="eyebrow">Performance web · aula 3 <span class="badge">SSG</span></p>
+    <h1>O que acontece na cidade neste fim de semana</h1>
+    <p class="lede">Catálogo gerado no build. O HTML inicial já traz os 12 eventos.</p>
+  </header>
+  <main class="wrap">
+    <form id="filters">
+      <label>Dia
+        <select name="day">
+          <option value="todos">Todos</option>
+          <option value="sexta">Sexta</option>
+          <option value="sabado">Sábado</option>
+          <option value="domingo">Domingo</option>
+        </select>
+      </label>
+      <label>Categoria
+        <select name="category">
+          <option value="todas">Todas</option>
+          <option value="musica">Música</option>
+          <option value="gastronomia">Gastronomia</option>
+          <option value="familia">Família</option>
+          <option value="esporte">Esporte</option>
+        </select>
+      </label>
+      <label>Ordem
+        <select name="sort">
+          <option value="catalogo">Catálogo</option>
+          <option value="perto">Mais perto</option>
+          <option value="longe">Mais longe</option>
+          <option value="titulo">Título</option>
+        </select>
+      </label>
+      <button type="submit">Aplicar filtros</button>
+    </form>
+    <p id="status">12 eventos encontrados</p>
+    <div id="grid" class="grid">
+      <article class="card" data-id="1" data-day="sabado" data-category="musica" data-distance="1.8" data-title="Festival de Música no Parque" data-description="Shows locais ao ar livre e praça de alimentação." data-date="Sáb • 16:00" data-location="Parque Central">
+        <img src="../../../assets/event-1.png" alt="Festival de Música no Parque" width="1000" height="563" decoding="async" fetchpriority="high">
+        <div class="card-body">
+          <p class="meta">Sáb • 16:00 · Parque Central · Música</p>
+          <h2>Festival de Música no Parque</h2>
+          <p>Shows locais ao ar livre e praça de alimentação.</p>
+          <p class="distance">1,8 km</p>
+          <button type="button" class="detail" data-detail>Ver detalhes</button>
+        </div>
+      </article>
+      <article class="card" data-id="2" data-day="sabado" data-category="gastronomia" data-distance="2.4" data-title="Feira Gastronômica Regional" data-description="Comidas regionais, doces e produtores locais." data-date="Sáb • 18:30" data-location="Praça da Matriz">
+        <img src="../../../assets/event-2.png" alt="Feira Gastronômica Regional" width="1000" height="563" decoding="async" loading="lazy">
+        <div class="card-body">
+          <p class="meta">Sáb • 18:30 · Praça da Matriz · Gastronomia</p>
+          <h2>Feira Gastronômica Regional</h2>
+          <p>Comidas regionais, doces e produtores locais.</p>
+          <p class="distance">2,4 km</p>
+          <button type="button" class="detail" data-detail>Ver detalhes</button>
+        </div>
+      </article>
+      <article class="card" data-id="3" data-day="sexta" data-category="familia" data-distance="3.2" data-title="Cinema ao Ar Livre" data-description="Sessão gratuita com estrutura para toda a família." data-date="Sex • 19:30" data-location="Centro Cultural">
+        <img src="../../../assets/event-3.png" alt="Cinema ao Ar Livre" width="1000" height="563" decoding="async" loading="lazy">
+        <div class="card-body">
+          <p class="meta">Sex • 19:30 · Centro Cultural · Família</p>
+          <h2>Cinema ao Ar Livre</h2>
+          <p>Sessão gratuita com estrutura para toda a família.</p>
+          <p class="distance">3,2 km</p>
+          <button type="button" class="detail" data-detail>Ver detalhes</button>
+        </div>
+      </article>
+      <article class="card" data-id="4" data-day="domingo" data-category="esporte" data-distance="4.1" data-title="Corrida 5K da Cidade" data-description="Percurso urbano com categorias abertas ao público." data-date="Dom • 07:00" data-location="Avenida Beira Lago">
+        <img src="../../../assets/event-4.png" alt="Corrida 5K da Cidade" width="1000" height="563" decoding="async" loading="lazy">
+        <div class="card-body">
+          <p class="meta">Dom • 07:00 · Avenida Beira Lago · Esporte</p>
+          <h2>Corrida 5K da Cidade</h2>
+          <p>Percurso urbano com categorias abertas ao público.</p>
+          <p class="distance">4,1 km</p>
+          <button type="button" class="detail" data-detail>Ver detalhes</button>
+        </div>
+      </article>
+      <article class="card" data-id="5" data-day="domingo" data-category="musica" data-distance="5.7" data-title="Encontro de Bandas" data-description="Apresentações de bandas independentes da região." data-date="Dom • 17:00" data-location="Concha Acústica">
+        <img src="../../../assets/event-5.png" alt="Encontro de Bandas" width="1000" height="563" decoding="async" loading="lazy">
+        <div class="card-body">
+          <p class="meta">Dom • 17:00 · Concha Acústica · Música</p>
+          <h2>Encontro de Bandas</h2>
+          <p>Apresentações de bandas independentes da região.</p>
+          <p class="distance">5,7 km</p>
+          <button type="button" class="detail" data-detail>Ver detalhes</button>
+        </div>
+      </article>
+      <article class="card" data-id="6" data-day="domingo" data-category="gastronomia" data-distance="6.2" data-title="Brunch de Produtores Locais" data-description="Degustação, café e produtos artesanais." data-date="Dom • 10:00" data-location="Mercado Municipal">
+        <img src="../../../assets/event-6.png" alt="Brunch de Produtores Locais" width="1000" height="563" decoding="async" loading="lazy">
+        <div class="card-body">
+          <p class="meta">Dom • 10:00 · Mercado Municipal · Gastronomia</p>
+          <h2>Brunch de Produtores Locais</h2>
+          <p>Degustação, café e produtos artesanais.</p>
+          <p class="distance">6,2 km</p>
+          <button type="button" class="detail" data-detail>Ver detalhes</button>
+        </div>
+      </article>
+      <article class="card" data-id="7" data-day="sabado" data-category="familia" data-distance="2.9" data-title="Oficina Infantil de Ciência" data-description="Experimentos simples e atividades educativas." data-date="Sáb • 14:00" data-location="Biblioteca Municipal">
+        <img src="../../../assets/event-7.png" alt="Oficina Infantil de Ciência" width="1000" height="563" decoding="async" loading="lazy">
+        <div class="card-body">
+          <p class="meta">Sáb • 14:00 · Biblioteca Municipal · Família</p>
+          <h2>Oficina Infantil de Ciência</h2>
+          <p>Experimentos simples e atividades educativas.</p>
+          <p class="distance">2,9 km</p>
+          <button type="button" class="detail" data-detail>Ver detalhes</button>
+        </div>
+      </article>
+      <article class="card" data-id="8" data-day="domingo" data-category="esporte" data-distance="7.5" data-title="Pedal de Domingo" data-description="Passeio ciclístico de ritmo leve e rota guiada." data-date="Dom • 06:30" data-location="Portal da Cidade">
+        <img src="../../../assets/event-8.png" alt="Pedal de Domingo" width="1000" height="563" decoding="async" loading="lazy">
+        <div class="card-body">
+          <p class="meta">Dom • 06:30 · Portal da Cidade · Esporte</p>
+          <h2>Pedal de Domingo</h2>
+          <p>Passeio ciclístico de ritmo leve e rota guiada.</p>
+          <p class="distance">7,5 km</p>
+          <button type="button" class="detail" data-detail>Ver detalhes</button>
+        </div>
+      </article>
+      <article class="card" data-id="9" data-day="sexta" data-category="musica" data-distance="1.3" data-title="Sarau de Sexta" data-description="Música, poesia e apresentações abertas." data-date="Sex • 20:00" data-location="Casa de Cultura">
+        <img src="../../../assets/event-9.png" alt="Sarau de Sexta" width="1000" height="563" decoding="async" loading="lazy">
+        <div class="card-body">
+          <p class="meta">Sex • 20:00 · Casa de Cultura · Música</p>
+          <h2>Sarau de Sexta</h2>
+          <p>Música, poesia e apresentações abertas.</p>
+          <p class="distance">1,3 km</p>
+          <button type="button" class="detail" data-detail>Ver detalhes</button>
+        </div>
+      </article>
+      <article class="card" data-id="10" data-day="sexta" data-category="gastronomia" data-distance="3.7" data-title="Noite do Hambúrguer" data-description="Food trucks e votação popular dos melhores pratos." data-date="Sex • 19:00" data-location="Praça de Alimentação">
+        <img src="../../../assets/event-10.png" alt="Noite do Hambúrguer" width="1000" height="563" decoding="async" loading="lazy">
+        <div class="card-body">
+          <p class="meta">Sex • 19:00 · Praça de Alimentação · Gastronomia</p>
+          <h2>Noite do Hambúrguer</h2>
+          <p>Food trucks e votação popular dos melhores pratos.</p>
+          <p class="distance">3,7 km</p>
+          <button type="button" class="detail" data-detail>Ver detalhes</button>
+        </div>
+      </article>
+      <article class="card" data-id="11" data-day="domingo" data-category="familia" data-distance="2.1" data-title="Piquenique em Família" data-description="Área verde, recreação e atividades infantis." data-date="Dom • 09:00" data-location="Bosque Municipal">
+        <img src="../../../assets/event-11.png" alt="Piquenique em Família" width="1000" height="563" decoding="async" loading="lazy">
+        <div class="card-body">
+          <p class="meta">Dom • 09:00 · Bosque Municipal · Família</p>
+          <h2>Piquenique em Família</h2>
+          <p>Área verde, recreação e atividades infantis.</p>
+          <p class="distance">2,1 km</p>
+          <button type="button" class="detail" data-detail>Ver detalhes</button>
+        </div>
+      </article>
+      <article class="card" data-id="12" data-day="sabado" data-category="esporte" data-distance="4.8" data-title="Aulão Funcional" data-description="Treino coletivo gratuito com acompanhamento." data-date="Sáb • 08:00" data-location="Ginásio Municipal">
+        <img src="../../../assets/event-12.png" alt="Aulão Funcional" width="1000" height="563" decoding="async" loading="lazy">
+        <div class="card-body">
+          <p class="meta">Sáb • 08:00 · Ginásio Municipal · Esporte</p>
+          <h2>Aulão Funcional</h2>
+          <p>Treino coletivo gratuito com acompanhamento.</p>
+          <p class="distance">4,8 km</p>
+          <button type="button" class="detail" data-detail>Ver detalhes</button>
+        </div>
+      </article>
+    </div>
+  </main>
+  <dialog id="detail">
+    <h2 id="detail-title"></h2>
+    <p id="detail-meta"></p>
+    <p id="detail-body"></p>
+    <form method="dialog"><button type="submit">Fechar</button></form>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
