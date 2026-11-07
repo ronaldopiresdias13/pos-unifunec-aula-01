@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo de eventos — CSR</title>
+  <meta name="description" content="Catálogo montado no navegador. O HTML inicial não traz os eventos.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="wrap">
+    <p class="eyebrow">Performance web · aula 3 <span class="badge">CSR</span></p>
+    <h1>O que acontece na cidade neste fim de semana</h1>
+    <p class="lede">Catálogo montado no navegador. O HTML inicial não traz os eventos.</p>
+  </header>
+  <main class="wrap">
+    <form id="filters">
+      <label>Dia
+        <select name="day">
+          <option value="todos">Todos</option>
+          <option value="sexta">Sexta</option>
+          <option value="sabado">Sábado</option>
+          <option value="domingo">Domingo</option>
+        </select>
+      </label>
+      <label>Categoria
+        <select name="category">
+          <option value="todas">Todas</option>
+          <option value="musica">Música</option>
+          <option value="gastronomia">Gastronomia</option>
+          <option value="familia">Família</option>
+          <option value="esporte">Esporte</option>
+        </select>
+      </label>
+      <label>Ordem
+        <select name="sort">
+          <option value="catalogo">Catálogo</option>
+          <option value="perto">Mais perto</option>
+          <option value="longe">Mais longe</option>
+          <option value="titulo">Título</option>
+        </select>
+      </label>
+      <button type="submit">Aplicar filtros</button>
+    </form>
+    <p id="status">Carregando eventos...</p>
+    <div id="grid" class="grid">
+
+    </div>
+  </main>
+  <dialog id="detail">
+    <h2 id="detail-title"></h2>
+    <p id="detail-meta"></p>
+    <p id="detail-body"></p>
+    <form method="dialog"><button type="submit">Fechar</button></form>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
