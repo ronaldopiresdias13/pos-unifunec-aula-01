@@ -1,0 +1,31 @@
+# Dependências
+node_modules/
+
+# Build de produção (gerado por npm run build)
+public/dist/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Variáveis de ambiente
+.env
+.env.*
+!.env.example
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editores / IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Cobertura / cache
+coverage/
+.cache/
+*.tsbuildinfo

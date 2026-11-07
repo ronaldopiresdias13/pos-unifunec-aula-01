@@ -1,0 +1,87 @@
+[
+  {
+    "id": "pantanal",
+    "nome": "Pacote Pantanal",
+    "preco": "A partir de R$ 1.290",
+    "descricao": "Quatro dias de natureza exuberante no coração do Pantanal, com guias especializados, passeios de barco e observação de fauna silvestre em habitats preservados.",
+    "incluidos": [
+      "Hospedagem em pousada ecolodge (3 noites)",
+      "Pensão completa com culinária regional",
+      "Passeio de barco pelo rio Paraguai",
+      "Trilha guiada com observação de animais",
+      "Transfer aeroporto ↔ pousada"
+    ],
+    "imagem": "/img/hero.jpg",
+    "imagemAlt": "Paisagem típica do Pantanal com rio e vegetação ao entardecer",
+    "imagemWidth": 1600,
+    "imagemHeight": 900
+  },
+  {
+    "id": "amazonia",
+    "nome": "Pacote Amazônia",
+    "preco": "A partir de R$ 1.890",
+    "descricao": "Imersão na maior floresta tropical do mundo: canoas, comunidades ribeirinhas e noites sob o céu da selva, com foco em educação ambiental.",
+    "incluidos": [
+      "Hospedagem em lodge na floresta (4 noites)",
+      "Todas as refeições inclusas",
+      "Passeio de canoa pela igapó",
+      "Visita a comunidade ribeirinha",
+      "Guia bilíngue especializado"
+    ],
+    "imagem": "/img/hero.jpg",
+    "imagemAlt": "Floresta Amazônica vista do rio",
+    "imagemWidth": 1600,
+    "imagemHeight": 900
+  },
+  {
+    "id": "chapada",
+    "nome": "Pacote Chapada dos Veadeiros",
+    "preco": "A partir de R$ 980",
+    "descricao": "Cachoeiras cristalinas, cerrados floridos e trilhas de impacto moderado no coração do Brasil Central, ideal para quem busca aventura e contemplação.",
+    "incluidos": [
+      "Hospedagem em pousada em Alto Paraíso (3 noites)",
+      "Café da manhã diário",
+      "Trilha até cachoeira Santa Bárbara",
+      "Entrada em parques e atrativos",
+      "Equipamento básico de segurança"
+    ],
+    "imagem": "/img/hero.jpg",
+    "imagemAlt": "Cachoeira na Chapada dos Veadeiros",
+    "imagemWidth": 1600,
+    "imagemHeight": 900
+  },
+  {
+    "id": "jalapao",
+    "nome": "Pacote Jalapão",
+    "preco": "A partir de R$ 1.450",
+    "descricao": "Dunas douradas, fervedouros e rios de água cristalina no Tocantins. Um roteiro off-road para quem quer paisagens únicas e pouca multidão.",
+    "incluidos": [
+      "Hospedagem em Mateiros (3 noites)",
+      "Pensão completa",
+      "Veículo 4x4 com motorista-guia",
+      "Visita aos fervedouros e dunas",
+      "Seguro viagem básico"
+    ],
+    "imagem": "/img/hero.jpg",
+    "imagemAlt": "Dunas do Jalapão ao pôr do sol",
+    "imagemWidth": 1600,
+    "imagemHeight": 900
+  },
+  {
+    "id": "fernando",
+    "nome": "Pacote Fernando de Noronha",
+    "preco": "A partir de R$ 2.490",
+    "descricao": "Paraíso Atlântico com praias de águas turquesa, snorkel com tartarugas e um ritmo de ilha que combina preservação e lazer responsável.",
+    "incluidos": [
+      "Hospedagem em pousada categorizada (4 noites)",
+      "Café da manhã diário",
+      "Passeio de barco com snorkel",
+      "Taxa de preservação ambiental (TPA)",
+      "Transfers internos na ilha"
+    ],
+    "imagem": "/img/hero.jpg",
+    "imagemAlt": "Praia de águas cristalinas em Fernando de Noronha",
+    "imagemWidth": 1600,
+    "imagemHeight": 900
+  }
+]
